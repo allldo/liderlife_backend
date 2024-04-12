@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Новое бронирование!</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&display=swap&_v=20230422140729" rel="stylesheet">
+
+	<style>
+		* {
+		  padding: 0;
+		  margin: 0;
+		  border: 0;
+		}
+
+		*,
+		*:before,
+		*:after {
+		  -webkit-box-sizing: border-box;
+		  box-sizing: border-box;
+		}
+
+		:focus,
+		:active {
+		  outline: none;
+		}
+
+		a:focus,
+		a:active {
+		  outline: none;
+		}
+
+		nav,
+		footer,
+		header,
+		aside {
+		  display: block;
+		}
+
+		html,
+		body {
+		  height: 100%;
+		  width: 100%;
+		  font-size: 100%;
+		  line-height: 1;
+		  font-size: 14px;
+		  -ms-text-size-adjust: 100%;
+		  -moz-text-size-adjust: 100%;
+		  -webkit-text-size-adjust: 100%;
+		}
+
+		input,
+		button,
+		textarea {
+		  font-family: inherit;
+		}
+
+		input::-ms-clear {
+		  display: none;
+		}
+
+		button {
+		  cursor: pointer;
+		}
+
+		button::-moz-focus-inner {
+		  padding: 0;
+		  border: 0;
+		}
+
+		a,
+		a:visited {
+		  text-decoration: none;
+		  font-family: "Manrope", sans-serif;
+		}
+
+		a:hover {
+		  text-decoration: none;
+		}
+
+		ul li {
+		  list-style: none;
+		}
+
+		img {
+		  vertical-align: top;
+		}
+
+		h1,
+		h2,
+		h3,
+		h4,
+		h5,
+		h6 {
+		  font-size: inherit;
+		  font-weight: 400;
+		  font-family: "Manrope", sans-serif;
+		}
+
+
+		body {
+		  font-family: "Manrope", sans-serif;
+		}
+
+		.container {
+		    display: block;
+		    margin: 0 auto !important;
+		    /* makes it centered */
+		    max-width: 560px;
+		    width: 560px; 
+		    background: #F5F5F5;
+		}
+
+		.header-email_main {
+			padding: 20px 30px;
+			width: 100%;
+		}
+
+		.center {
+		    display: grid;
+		    width: 100%;
+		    height: 100vh;
+		    align-items: center;
+		    align-content: center;
+		    justify-content: center;
+		    justify-items: center;
+		}
+
+		.links-header_main a {
+			text-decoration: none;
+			font-style: normal;
+			font-weight: 400;
+			font-size: 16px;
+			line-height: 18px;
+			text-align: right;
+
+			color: #000000;		
+		}
+
+		.subject-title__block {
+			background: #CCFA57;
+			padding: 15px 0px;
+		}
+
+		.subject-title__block h3 {
+			font-style: normal;
+			font-weight: 700;
+			font-size: 28px;
+			line-height: 125%;
+			/* or 40px */
+
+			text-align: center;
+			letter-spacing: -0.02em;
+
+			color: #1B1328;
+		}
+
+		table {
+			border-spacing: 0px; 
+		}
+
+		.window th {
+			padding: 15px;
+			text-align: left;
+			border-left: 1px solid #9A99A1;
+			border-top: 1px solid #9A99A1;
+			border-bottom: 1px solid #9A99A1;			
+		}
+
+		.window th + th  {
+			padding: 15px;
+			text-align: left;
+			border-right: 1px solid #9A99A1;
+			border-bottom: 1px solid #9A99A1;
+			border-top: 1px solid #9A99A1;			
+		}
+
+		.window td  {
+			padding: 15px;
+			text-align: left;
+			border-left: 1px solid #9A99A1;
+			border-bottom: 1px solid #9A99A1;			
+		}
+
+		.window td + td  {
+			padding: 15px;
+			text-align: left;
+			border-right: 1px solid #9A99A1;
+			border-bottom: 1px solid #9A99A1;			
+		}
+
+
+		.info-block_data {
+			padding: 20px 30px 0px;
+			margin: 30px 0px 0px;
+		}
+
+		.window th {
+			font-style: normal;
+			font-weight: 700;
+			font-size: 16px;
+			line-height: 125%;
+
+			color: #000000;
+		}
+
+		.window td {
+			font-style: normal;
+			font-weight: 400;
+			font-size: 16px;
+			line-height: 125%;
+
+			color: #000000;
+
+		}
+
+		.info-row_block p {
+			font-style: normal;
+			font-weight: 400;
+			font-size: 16px;
+			line-height: 40px;
+
+			color: #9A99A2;		
+		}
+
+		.info-row_block p span{
+			color: #000;		
+		}
+
+		.info-row_block {
+			margin: 25px 0px;
+		}
+
+		footer {
+			padding: 0px 30px 20px;
+		}
+
+		.main-footer_block {
+		    border-bottom: 1px solid #928A8A;
+		    padding: 0px 0px 20px;
+		    width: 100%;
+		}
+
+		.sub__only {
+			font-style: normal;
+			font-weight: 500;
+			font-size: 16px;
+			line-height: 20px;
+
+			text-align: center;
+
+			color: #000000;
+
+			margin-bottom: 18px;
+		    border-top: 1px solid #928A8A;
+		    width: 100%;
+		    padding: 20px 0px;
+		}
+
+		.main-footer_block .links-media_footer a {
+			font-weight: 600;
+			font-size: 18px;
+			line-height: 20px;
+			color: #000000 !important;	
+			text-decoration: none;	
+		}
+
+		.main-footer_block td {
+			text-align: center;
+		}
+
+		.footer-main_block .links-media_footer {
+			width: 100%;
+		}
+
+		.low-footer_block {
+			margin: 25px 0px 20px;
+		}
+
+		.low-footer_block h4 {
+			font-style: normal;
+			font-weight: 500;
+			font-size: 16px;
+			line-height: 25px;
+
+			text-align: center;
+
+			color: #000000;	
+			margin: 0px 0px 20px;
+		}
+
+		.low-footer_block p {
+			font-style: normal;
+			font-weight: 500;
+			font-size: 13px;
+			line-height: 20px;
+			text-align: center;
+
+			color: #000000;
+		}
+
+
+	</style>
+</head>
+<body>
+	<div class="container">
+		<table class="header-email_main">
+			<tbody>
+				<tr>
+					<td style="width: 346px;">
+						<a href="https://liderlife.ru/">
+							<img src="https://liderlife.ru/image/logo/logolider.png">
+						</a>						
+					</td>			
+					<td>
+						<h3 class="links-header_main" style="text-align: right;">
+							<a href="tel:+7 (495) 649-63-60">+7 (495) 649-63-60</a>
+							<br>
+							<a href="mailto:info@liderlife.ru">info@liderlife.ru</a>
+						</h3>						
+					</td>	
+				</tr>
+			</tbody>		
+		</table>
+		<div class="subject-title__block">
+			<h3>Новое бронирование</h3>
+		</div>
+		<div class="info-block_data">
+		  <table class="window">
+		   <tr>
+		    <th>Программа</th>
+		    <th>Смена</th>
+		   </tr>
+		   <tr>
+		   	<td>{{ programm_info }}</td>
+		   	<td>{{ data_smeni }}</td>
+		   </tr>
+		  </table>
+		  <div class="info-row_block">
+		  	<p>Контактный телефон: <span>{{ phone }}</span></p>
+		  	<p>Родитель/представитель: <span>{{ data_parent }}</span></p>
+		  	<p>Ребёнок: <span>{{ fio }}</span></p>
+		  	<p>Дата рождения участника: <span>{{ data_uchast }}</span></p>
+		  	<p>Email: <span>{{ email }}</span></p>
+		  	<p>Доп.телефон: <span>{{ dop_phone }}</span></p>
+		  	<p>Откуда о нас узнали: <span>{{ info_title }}</span></p>
+		  	<p>Примечание: <span>{{ primechanie }}</span></p>
+		  </div> 
+		</div>
+		<footer class="footer-main_block">
+			<h4 class="sub__only">Подписывайтесь на нас в социальных сетях <br> и следите за новостями "Лидерлайф".</h4>
+			<table class="main-footer_block">
+				<tbody>
+					<tr class="links-media_footer">
+						<td style="width: 100px;">
+							<a target="_blank" href="https://t.me/+rYn9DavI6s80OTgy">Телеграм</a>
+						</td>
+						<td style="width: 120px;">
+							<a target="_blank" href="https://vk.com/liderlifepub">Вконтакте</a>
+						</td>
+						<td style="width: 90px;">
+							<a target="_blank" href="https://www.youtube.com/user/liderlifevideo">Ютуб</a>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+			<div class="low-footer_block">
+				<h4>С теплотой, команда Liderlife - развивающий отдых в лагерях для детей и подростков.</h4>
+				<p>Команда "Лидерлайф Турс" Туроператор детского отдыха, лагерь "Лидер" liderlife.ru
+				<br>
+				125373, г. Москва, Походный проезд, дом 4, кор. 1, офис 409-Б (м. Тушинская, МЦД Трикотажная)
+				<br>
+				<br>
+				Тел: +7(495) 649-63-60 (мн.)
+				<br>
+				<br>
+				Лидер - больше чем лагерь!
+				</p>
+				<br>
+			</div>
+		</footer>
+	</div>
+</body>
+</html>
+

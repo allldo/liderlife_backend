@@ -1,0 +1,10 @@
+db.sqlite3
+*.pyc
+*/*.pyc
+*/*/*.pyc
+.DS_Store
+*/.DS_Store
+*/*/.DS_Store
+backend-local
+.venv
+.env

@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Предварительное бронирование!</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&display=swap&_v=20230422140729" rel="stylesheet">
+
+	<style>
+		* {
+		  padding: 0;
+		  margin: 0;
+		  border: 0;
+		}
+
+		*,
+		*:before,
+		*:after {
+		  -webkit-box-sizing: border-box;
+		  box-sizing: border-box;
+		}
+
+		:focus,
+		:active {
+		  outline: none;
+		}
+
+		a:focus,
+		a:active {
+		  outline: none;
+		}
+
+		nav,
+		footer,
+		header,
+		aside {
+		  display: block;
+		}
+
+		html,
+		body {
+		  height: 100%;
+		  width: 100%;
+		  font-size: 100%;
+		  line-height: 1;
+		  font-size: 14px;
+		  -ms-text-size-adjust: 100%;
+		  -moz-text-size-adjust: 100%;
+		  -webkit-text-size-adjust: 100%;
+		}
+
+		a,
+		a:visited {
+		  text-decoration: none;
+		  font-family: "Manrope", sans-serif;
+		}
+
+		a:hover {
+		  text-decoration: none;
+		}
+	</style>
+</head>
+<body>
+	<div class="container" style="font-family: 'Manrope', sans-serif; margin: 0 auto !important; max-width: 560px; width: 560px; background: #F5F5F5;">
+		<table class="header-email_main" style="padding: 20px 30px; width: 100%;">
+			<tbody>
+				<tr>
+					<td style="width: 346px;">
+						<a href="https://liderlife.ru/">
+							<img src="https://liderlife.ru/image/logo/logolider.png">
+						</a>						
+					</td>			
+					<td>
+						<h3 class="links-header_main" style="text-align: right;">
+							<a href="tel:+7 (495) 649-63-60" style="font-style: normal; font-weight: 400; font-size: 16px; line-height: 18px; text-align: right; color: #000000;">+7 (495) 649-63-60</a>
+							<br>
+							<a href="mailto:camp@liderlife.ru" style="font-style: normal; font-weight: 400; font-size: 16px; line-height: 18px; text-align: right; color: #000000;">camp@liderlife.ru</a>
+						</h3>						
+					</td>	
+				</tr>
+			</tbody>		
+		</table>
+		<div class="subject-title__block" style="background: #CCFA57; padding: 20px 0px;">
+			<h3 style="font-style: normal; font-weight: 700; font-size: 24px; line-height: 125%; text-align: center; letter-spacing: -0.02em; color: #1B1328;">Предварительное бронирование!</h3>
+		</div>
+		<div class="welcome-text_block" style="padding: 20px 30px 0px; margin: 10px 0px 0px;">
+			<h3 style="color: #000; font-size: 16px; font-style: normal; font-weight: 500; line-height: 125%;">
+				Здравствуйте, {{ data_parent }}!
+			</h3>
+			<p style="margin: 15px 0 5px; color: #000; font-size: 16px; font-style: normal; font-weight: 400; line-height: 125%;">
+				Мы получили ваш заказ! Место на программе забронировано. Мы обязательно свяжемся с Вами в ближайшее время.После получения этого письма, пожалуйста, дождитесь звонка менеджера. Оплату можно будет производить после подтверждения наличия мест нашим менеджером по телефону.
+			</p>
+		</div>
+
+		<div class="info-block_data" style="padding: 20px 30px 0px; margin: 0px 0px 0px;">
+		  <table class="window" style="border-spacing: 0px; border-collapse: collapse; width: 100%;">
+		   <tr>
+		    <th style="padding: 15px; border-left: 1px solid #9A99A1; border-top: 1px solid #9A99A1; border-bottom: 1px solid #9A99A1; font-style: normal; font-weight: 700; font-size: 16px; line-height: 125%; color: #000000;">Программа</th>
+		    <th style="padding: 15px; border-right: 1px solid #9A99A1; border-bottom: 1px solid #9A99A1; border-top: 1px solid #9A99A1; font-style: normal; font-weight: 700; font-size: 16px; line-height: 125%; color: #000000;">Смена</th>
+		   </tr>
+		   <tr>
+		   	<td style="padding: 15px; text-align: left; border-left: 1px solid #9A99A1; border-bottom: 1px solid #9A99A1; font-style: normal; font-weight: 400; font-size: 16px; line-height: 125%; color: #000000;">{{ programm_info }}</td>
+		   	<td style="padding: 15px; text-align: left; border-right: 1px solid #9A99A1; border-bottom: 1px solid #9A99A1; font-style: normal; font-weight: 400; font-size: 16px; line-height: 125%; color: #000000;">{{ data_smeni }}</td>
+		   </tr>
+		  </table>
+		  <div class="info-row_block" style="margin: 20px 0px;">
+		  	<p style="font-style: normal; font-weight: 400; font-size: 16px; line-height: 35px; color: #9A99A2;">Контактный телефон: <span style="color: #000;">{{ phone }}</span></p>
+		  	<p style="font-style: normal; font-weight: 400; font-size: 16px; line-height: 35px; color: #9A99A2;">Родитель/представитель: <span style="color: #000;">{{ data_parent }}</span></p>
+		  	<p style="font-style: normal; font-weight: 400; font-size: 16px; line-height: 35px; color: #9A99A2;">Ребёнок: <span style="color: #000;">{{ fio }}</span></p>
+		  	<p style="font-style: normal; font-weight: 400; font-size: 16px; line-height: 35px; color: #9A99A2;">Дата рождения участника: 
+		  		<span style="color: #000;">{{ data_uchast }}</span>
+		  	<p style="font-style: normal; font-weight: 400; font-size: 16px; line-height: 35px; color: #9A99A2;">Email: <span style="color: #000;">{{ email }}</span></p>
+		  	<p style="font-style: normal; font-weight: 400; font-size: 16px; line-height: 35px; color: #9A99A2;">Доп.телефон: <spa style="color: #000;">{{ dop_phone }}</span></p>
+		  	</p>
+		  </div> 
+		  <h3 class="thx-text__strong" style="color: #000; font-size: 17px; font-style: normal; font-weight: 700; line-height: 125%;">Благодарим Вас за выбор нашего лагеря!</h3>
+		</div>
+		<div style="background: #7C57FC; padding: 20px 0px; border: none; margin: 30px 0px;">
+			<h3 style="font-style: normal; font-weight: 600; font-size: 24px; line-height: 125%; text-align: center; letter-spacing: -0.02em; color: #fff;">Бронь действительна 3 рабочих дня</h3>
+		</div>
+
+		<div class="item-block_default" style="padding: 0px 30px 0px; margin: 0px 0px 0px;">
+			<h3 style="color: #000; font-size: 16px; font-style: normal; font-weight: 500; line-height: 125%;">
+				Как оплатить путёвку в лагерь?
+			</h3>
+			<p style="margin: 20px 0 25px; color: #000; font-size: 14px; font-style: normal; font-weight: 400; line-height: 125%;">
+				Выберите наиболее удобный Вам способ из предложенных.
+			</p>
+			<div class="info-block__item" style="padding: 5px 15px 15px; background: #fff; border-radius: 16px;">
+				<ol style="padding: 0px 15px;">
+					<li style="margin: 15px 0 5px; color: #000; font-size: 14px; font-style: normal; font-weight: 400; line-height: 125%;">
+						<a target="_blank" href="https://docs.google.com/forms/d/e/1FAIpQLSctsU7vGfeAf3pBlNhICjOiAbPUDXkBnc-i6FtVlgVRV9I4KA/viewform?usp=sf_link" style="color: #7C57FC; font-size: 14px; font-style: normal; font-weight: 400; line-height: 125%;text-decoration: none;">Заказать бесплатную курьерскую доставку</a> с полным комплектом документов в лагерь (Бесплатная доставка в пределах МКАД)
+					</li>
+					<li style="margin: 15px 0 5px;">
+						<a target="_blank" href="https://liderlife.ru/payment" style="color: #000; font-size: 14px; font-style: normal; font-weight: 400; line-height: 125%;text-decoration: none;">Оплатить онлайн>>></a>
+					</li>
+					<li style="margin: 15px 0 5px; color: #000; font-size: 14px; font-style: normal; font-weight: 400; line-height: 125%;">
+						Запросить счёт на оплату.
+					</li>
+					<li style="margin: 15px 0 5px; color: #000; font-size: 14px; font-style: normal; font-weight: 400; line-height: 125%;">
+						Подъехать в офис по адресу: г. Москва, Походный проезд, д.4к1, оф. 409-Б (м. Тушинская, МЦД Трикотажная)
+					</li>
+				</ol>				
+				
+			</div>
+		</div>
+		<a target="_blank" href="https://liderlife.ru/payment" class="btn-payment" style="display: block; padding: 20px 30px; border: none; margin: 15px 0px; color: #fff; text-decoration: none;">
+			<center class="subject-title__block_purple-btn" style="background: #7C57FC; padding: 15px 0px; border: none; border-radius: 16px;">
+				<h3 style="font-style: normal; font-weight: 500; font-size: 20px; text-align: center; letter-spacing: -0.02em; color: #ccfa56; text-decoration: none;">Оплатить онлайн на сайте</h3>
+			</center>
+		</a>
+		<div class="item-block_default" style="padding: 0px 30px 0px; margin: 0px 0px 0px;">
+			<h3 class="mb-item" style="color: #000; font-size: 16px; font-style: normal; font-weight: 500; line-height: 125%; margin: 0 0 20px;">
+				Какие документы требуются<br> 
+				для оформления путёвки?
+			</h3>
+			<div class="info-block__item" style="padding: 5px 15px 15px; background: #fff; border-radius: 16px;">
+				<ol style="padding: 0px 15px;">
+					<li style="margin: 15px 0 5px; color: #000; font-size: 14px; font-style: normal; font-weight: 400; line-height: 125%;">
+						Копия паспорта одного из родителей.
+					</li>
+					<li style="margin: 15px 0 5px; color: #000; font-size: 14px; font-style: normal; font-weight: 400; line-height: 125%;">
+						Копия свидетельства о рождении/паспорта ребёнка.
+					</li>
+					<li style="margin: 15px 0 5px; color: #000; font-size: 14px; font-style: normal; font-weight: 400; line-height: 125%;">
+						Копия медицинского полиса ребёнка.
+					</li>
+					<li style="margin: 15px 0 5px; color: #000; font-size: 14px; font-style: normal; font-weight: 400; line-height: 125%;">
+						<a href="https://docs.google.com/forms/d/1F14oSylEkR7LrMQ5S1j6Bc0EFYEE5G26hi0Hwu18FcY/edit?chromeless=1" target="_blank" style="color: #7C57FC !important; text-decoration: none;">
+							Анкета участника, заполненная онлайн.
+						</a>
+					</li>
+				</ol>				
+			</div>
+			<p style="margin: 20px 0 25px; color: #000; font-size: 14px; font-style: normal; font-weight: 400; line-height: 125%;">
+				Документы можно предоставить в электронном виде (скан или качественное фото) нам на почту camp@liderlife.ru одним письмом.
+			</p>
+		</div>
+		<div class="item-block_default" style="padding: 0px 30px 0px; margin: 0px 0px 0px;">
+			<h3 class="mb-item" style="color: #000; font-size: 16px; font-style: normal; font-weight: 500; line-height: 125%; margin: 0 0 20px;">
+				Какие документы требуются в день отправки?
+			</h3>
+			<div class="info-block__item" style="padding: 5px 15px 15px; background: #fff; border-radius: 16px;">
+				<ol style="padding: 0px 15px;">
+					<li style="margin: 15px 0 5px; color: #000; font-size: 14px; font-style: normal; font-weight: 400; line-height: 125%;">
+						Справка формы 079У для отъезжающих в лагерь.
+					</li>
+					<li style="margin: 15px 0 5px; color: #000; font-size: 14px; font-style: normal; font-weight: 400; line-height: 125%;">
+						Справка об отсутствии контактов с инфекционными больными,является дополнением к справке об эпидемиологическом окружении.
+						Она выдается, если за последние 2 недели вы не летали в другой город или страну и не были зарегистрированы в контакте с больными.
+					</li>
+					<li style="margin: 15px 0 5px; color: #000; font-size: 14px; font-style: normal; font-weight: 400; line-height: 125%;">
+						Анализ на яйцеглист и энтеробиоз, если ребенок хочет посещать бассейн.<strong> Не требуется для лагеря Horse Paradise </strong>
+					</li>
+				</ol>				
+			</div>
+			<strong class="strong" style="margin: 20px 0 25px; color: #000; font-size: 15px; font-style: normal; font-weight: 400; line-height: 125%;">
+				Если у Вас возникнут какие-либо дополнительные вопросы, будем рады ответить по нашему многоканальному телефону 7 дней в неделю с 10:00 до 20:00 +7 (495) 649-63-60.
+			</strong>
+		</div>
+		<footer class="footer-main_block" style="padding: 0px 30px 20px;">
+			<h4 class="sub__only" style="font-style: normal; font-weight: 500; font-size: 16px; line-height: 20px; text-align: center; color: #000000; margin-bottom: 18px; border-top: 1px solid #928A8A; width: 100%; padding: 20px 0px;">Подписывайтесь на нас в социальных сетях <br> и следите за новостями "Лидерлайф".</h4>
+			<table class="main-footer_block" style="border-bottom: 1px solid #928A8A; padding: 0px 0px 20px; width: 100%;">
+				<tbody>
+					<tr class="links-media_footer" style="width: 100%;">
+						<td style="width: 100px; text-align: center;">
+							<a style="font-weight: 600; font-size: 18px; line-height: 20px; color: #000000 !important; text-decoration: none;" target="_blank" href="https://t.me/+rYn9DavI6s80OTgy">Телеграм</a>
+						</td>
+						<td style="width: 120px; text-align: center;">
+							<a style="font-weight: 600; font-size: 18px; line-height: 20px; color: #000000 !important; text-decoration: none;" target="_blank" href="https://vk.com/liderlifepub">Вконтакте</a>
+						</td>
+						<td style="width: 90px; text-align: center;">
+							<a style="font-weight: 600; font-size: 18px; line-height: 20px; color: #000000 !important; text-decoration: none;" target="_blank" href="https://www.youtube.com/user/liderlifevideo">Ютуб</a>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+			<div class="low-footer_block" style="margin: 25px 0px 20px;">
+				<h4 style="font-style: normal; font-weight: 500; font-size: 16px; line-height: 25px; text-align: center; color: #000000; margin: 0px 0px 20px;">С теплотой, команда Liderlife - развивающий отдых в лагерях для детей и подростков.</h4>
+				<p style="font-style: normal; font-weight: 500; font-size: 13px; line-height: 20px; text-align: center; color: #000000;">Команда "Лидерлайф Турс" Туроператор детского отдыха, лагерь "Лидер" liderlife.ru
+				<br>
+				125373, г. Москва, Походный проезд, дом 4, кор. 1, офис 409-Б (м. Тушинская, МЦД Трикотажная)
+				<br>
+				<br>
+				Тел: +7(495) 649-63-60 (мн.)
+				<br>
+				<br>
+				Лидер - больше чем лагерь!
+				</p>
+				<br>
+			</div>
+		</footer>
+	</div>
+</body>
+
+</html>
+

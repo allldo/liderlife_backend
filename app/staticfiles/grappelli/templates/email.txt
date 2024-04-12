@@ -1,0 +1,40 @@
+Заказ #{{number}} успешно оформлен
+
+Название
+Цена
+Количество
+Итог
+
+{% for product in products %}
+{{product.name}}
+{{product.price}}
+{{product.quantity}}
+{{product.getitog}}
+{% endfor %}
+
+
+
+Стоимость товаров: {{price_all}} руб
+Стоимость доставки: {{dostavka_price}} руб
+
+
+Способ доставки: {{dostavka}}
+{% if dostavka == 'Самовывоз' %}
+Способ оплаты: Оплата в магазине (наличными/карте)
+{% else %}
+Способ оплаты: <strong>Доставка по вашему адресу, оплата (наличными/карте)
+{% endif %}
+
+
+Имя: {{first_name}}
+Фамилия:{{last_name}}
+Номер: {{phone}}
+Email: {{email}}
+{% if place %}
+Город: {{place}}
+{% endif %}
+{% if address %}
+Адрес: {{address}}
+{% endif %}
+
+Дата: {{showtime}}
