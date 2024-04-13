@@ -1,6 +1,6 @@
 from io import BytesIO
 from PIL import Image
-
+import os
 from django.contrib.auth.models import User
 
 from django.core.files import File
@@ -15,6 +15,9 @@ import json
 from rest_framework.response import Response
 
 from tinymce import models as tinymce_models
+
+base_url = os.environ.get('BASE_URL', '')
+print("Working witn base_url: ", base_url)
 
 class TextMain(models.Model):    
     name = models.CharField("Текст на главной", max_length=255, blank=True)
@@ -35,7 +38,7 @@ class CategoryTeam(models.Model):
 
     def get_preview(self):
         if self.preview:
-            return 'https://liderlife.ru' + self.preview.url
+            return base_url + self.preview.url
         return ''
 
     class Meta:
@@ -53,7 +56,7 @@ class MainSoloSlider(models.Model):
 
     def get_image(self):
         if self.img:
-            return 'https://liderlife.ru' + self.img.url
+            return base_url + self.img.url
         return ''
 
     class Meta:
@@ -71,7 +74,7 @@ class MainGalery(models.Model):
 
     def get_image(self):
         if self.img:
-            return 'https://liderlife.ru' + self.img.url
+            return base_url + self.img.url
         return ''
 
     class Meta:
@@ -104,7 +107,7 @@ class Team(models.Model):
 
     def get_preview(self):
         if self.preview:
-            return 'https://liderlife.ru' + self.preview.url
+            return base_url + self.preview.url
         return ''
 
     class Meta:
@@ -128,7 +131,7 @@ class Programms(models.Model):
 
     def get_preview(self):
         if self.main_photo:
-            return 'https://liderlife.ru' + self.main_photo.url
+            return base_url + self.main_photo.url
         return ''
 
     class Meta:
@@ -185,7 +188,7 @@ class ImagesPlace(models.Model):
 
     def get_image(self):
         if self.img:
-            return 'https://liderlife.ru' + self.img.url
+            return base_url + self.img.url
         return ''
 
     class Meta:
@@ -231,7 +234,7 @@ class Template(models.Model):
 
     def get_preview(self):
         if self.main_photo:
-            return 'https://liderlife.ru' + self.main_photo.url
+            return base_url + self.main_photo.url
         return ''
 
     class Meta:
@@ -250,7 +253,7 @@ class BlockImgSmall(models.Model):
 
     def get_image(self):
         if self.img:
-            return 'https://liderlife.ru' + self.img.url
+            return base_url + self.img.url
         return ''
 
     class Meta:
@@ -268,7 +271,7 @@ class BlockImgsTeam(models.Model):
 
     def get_image(self):
         if self.img:
-            return 'https://liderlife.ru' + self.img.url
+            return base_url + self.img.url
         return ''
 
     class Meta:
@@ -286,7 +289,7 @@ class BlockImgPlace(models.Model):
 
     def get_image(self):
         if self.img:
-            return 'https://liderlife.ru' + self.img.url
+            return base_url + self.img.url
         return ''
 
     class Meta:
@@ -319,7 +322,7 @@ class BlockTimes(models.Model):
 
     def get_image(self):
         if self.img:
-            return 'https://liderlife.ru' + self.img.url
+            return base_url + self.img.url
         return ''
 
     class Meta:
@@ -338,7 +341,7 @@ class BlockEvents(models.Model):
 
     def get_image(self):
         if self.img:
-            return 'https://liderlife.ru' + self.img.url
+            return base_url + self.img.url
         return ''
 
     class Meta:
@@ -358,7 +361,7 @@ class BlockPlace(models.Model):
 
     def get_image(self):
         if self.img:
-            return 'https://liderlife.ru' + self.img.url
+            return base_url + self.img.url
         return ''
 
     class Meta:
@@ -376,7 +379,7 @@ class BlockQuestions(models.Model):
 
     def get_image(self):
         if self.img:
-            return 'https://liderlife.ru' + self.img.url
+            return base_url + self.img.url
         return ''
 
     class Meta:
