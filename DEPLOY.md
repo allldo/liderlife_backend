@@ -19,6 +19,11 @@ server {
         proxy_pass http://localhost:1337/media/;
     }
 
+    location /image/ {
+        # Проксирование запросов к изображениям Django
+        proxy_pass http://localhost:1337/image/;
+    }
+
     location /images/ {
         # Проксирование запросов к изображениям Django
         proxy_pass http://localhost:1337/images/;
