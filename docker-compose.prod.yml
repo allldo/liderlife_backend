@@ -35,7 +35,7 @@ services:
       - web
 
 networks:
-  custom_network:
+  host_network:
     driver: host
 
 volumes:
