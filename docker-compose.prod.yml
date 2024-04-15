@@ -6,7 +6,8 @@ services:
       context: ./app
       dockerfile: Dockerfile.prod
     platform: linux/amd64
-    network_mode: "host"
+    networks:
+      - host_network
     command: gunicorn backend.wsgi:application --bind 0.0.0.0:8000
     volumes:
       - static_volume:/home/app/web/static
@@ -32,6 +33,10 @@ services:
       - 1337:80
     depends_on:
       - web
+
+networks:
+  custom_network:
+    driver: host
 
 volumes:
   postgres_data:
