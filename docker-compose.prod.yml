@@ -6,8 +6,7 @@ services:
       context: ./app
       dockerfile: Dockerfile.prod
     platform: linux/amd64
-    extra_hosts:
-      host.docker.internal: host-gateway
+    hostname: test-liderlife.tw1.ru
     command: gunicorn backend.wsgi:application --bind 0.0.0.0:8000
     volumes:
       - static_volume:/home/app/web/static
