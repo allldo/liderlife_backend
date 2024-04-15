@@ -16,7 +16,6 @@ services:
       - ./.env.prod
     depends_on:
       - db
-      - mailhog
   db:
     image: postgres:15
     volumes:
@@ -32,14 +31,6 @@ services:
       - 1337:80
     depends_on:
       - web
-
-  mailhog:
-    image: mailhog/mailhog
-    ports:
-      - 1025:1025
-      - 8025:8025
-    environment:
-      - DEV_ENV=true
 
 volumes:
   postgres_data:
