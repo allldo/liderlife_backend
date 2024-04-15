@@ -39,9 +39,17 @@ INSTALLED_APPS = [
     "django_filters",
 ]
 
-CSRF_TRUSTED_ORIGINS = os.environ.get("DJANGO_ALLOWED_HOSTS").split(" ")
-CORS_ALLOWED_ORIGINS = os.environ.get("DJANGO_ALLOWED_HOSTS").split(" ")
-CORS_ORIGIN_WHITELIST = os.environ.get("DJANGO_ALLOWED_HOSTS").split(" ")
+
+CSRF_TRUSTED_ORIGINS = [
+    "http://localhost:8080",
+    "https://liderlife.ru",
+]
+
+CSRF_TRUSTED_ORIGINS = os.environ.get("DJANGO_ALLOWED_ORIGINS").split(" ")
+
+CORS_ALLOWED_ORIGINS = os.environ.get("DJANGO_ALLOWED_ORIGINS").split(" ")
+
+CORS_ORIGIN_WHITELIST = os.environ.get("DJANGO_ALLOWED_ORIGINS").split(" ")
 
 MIDDLEWARE = [
     "django.middleware.security.SecurityMiddleware",
