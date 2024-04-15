@@ -6,12 +6,12 @@ services:
       context: ./app
       dockerfile: Dockerfile.prod
     platform: linux/amd64
+    extra_hosts:
+      host.docker.internal: host-gateway
     command: gunicorn backend.wsgi:application --bind 0.0.0.0:8000
     volumes:
       - static_volume:/home/app/web/static
       - media_volume:/home/app/web/media
-    ports:
-      - 465:465
     expose:
       - 8000
     env_file:
