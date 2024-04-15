@@ -16,6 +16,7 @@ services:
       - ./.env.prod
     depends_on:
       - db
+      - mailhog
   db:
     image: postgres:15
     volumes:
