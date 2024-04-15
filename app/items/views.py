@@ -296,8 +296,13 @@ def send_email_callback_client(request):
 
     print(text_content)
 
-    msg = EmailMultiAlternatives(subject, text_content, from_email, [to])
-    msg.send()
+    try:
+        msg = EmailMultiAlternatives(subject, text_content, from_email, [to])
+        msg.send()
+        print("Письмо успешно отправлено")
+    except Exception as e:
+        print(f"Ошибка отправки письма: {e}")
+                    
     return Response({"Message": "Сообщение отправлено успешно"})
 
 
