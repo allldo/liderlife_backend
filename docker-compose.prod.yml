@@ -12,6 +12,11 @@ services:
       - media_volume:/home/app/web/media
     expose:
       - 8000
+      - 465
+      - 587
+    ports:
+      - 465:465
+      - 587:587
     env_file:
       - ./.env.prod
     depends_on:
