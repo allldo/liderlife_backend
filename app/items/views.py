@@ -1,6 +1,6 @@
 from django.db.models import Q
 from django.http import Http404
-
+import os
 import smtplib
 
 from django.core import mail
@@ -27,6 +27,9 @@ from .serializers import *
 import uuid
 
 from django.http import JsonResponse
+
+default_from_email = os.environ.get("DEFAULT_FROM_EMAIL", "")
+print("Working witn default_from_email: ", default_from_email)
 
 
 class GetTextMain(APIView):
@@ -280,24 +283,17 @@ def send_email_callback_client(request):
     name = request.data.get("name", "")
     phone = request.data.get("phone", "")
 
-    # subject, from_email, to = (
-    #     "Предварительное бронирование",
-    #     "camp@liderlife.ru",
-    #     "camp@liderlife.ru",
-    # )
-
-    # TODO: Replace by actual email
     subject, from_email, to = (
-        "Предварительное бронирование",
-        "redzumi@yandex.ru",
-        "redzumi@yandex.ru",
+        "Запрос обратного звонка",
+        default_from_email,
+        default_from_email,
     )
 
     text_content = render_to_string(
         "callback.txt",
         {"name": name, "phone": phone},
     )
-    
+
     print(text_content)
 
     msg = EmailMultiAlternatives(subject, text_content, from_email, [to])
