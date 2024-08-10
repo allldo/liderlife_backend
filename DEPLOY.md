@@ -11,7 +11,7 @@ docker compose -f docker-compose.prod.yaml up -d --build
 Load backups (inside backend_web container):
 ```shell
 # docker exec -it %container% sh
-python3 ./manage.py loaddata --exclude auth.permission --exclude admin.logentry --exclude contenttypes ./manual_backups/12.04.24_10:30.json
+python3 ./manage.py loaddata --exclude auth.permission --exclude admin.logentry --exclude contenttypes ./manual_backups/12.04.24_10-30.json
 ```
 
 Certbot for domain:
