@@ -26,9 +26,7 @@ def payment_create_view(request):
         try:
             data = json.loads(request.body)
 
-            description = (
-                f"{data.get('programm_info', '')} {data.get('data_smeni', '')}"
-            )
+            description = f"{data.get('email', '')} {data.get('programm_info', '')} {data.get('data_smeni', '')}"
             payment_data = {
                 "amount": {"value": data.get("price", 0), "currency": "RUB"},
                 "confirmation": {"type": "embedded"},
