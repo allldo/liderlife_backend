@@ -17,6 +17,8 @@ services:
     image: postgres:15
     volumes:
       - postgres_data:/var/lib/postgresql/data/
+    ports:
+      - 5432:5432
     environment:
       - POSTGRES_USER=dev_liderlife
       - POSTGRES_PASSWORD=dev_liderlife
