@@ -18,7 +18,7 @@ ALLOWED_HOSTS = os.environ.get("DJANGO_ALLOWED_HOSTS").split(" ")
 # Подключение ЮКассы
 
 YOOKASSA_KEY = os.environ.get("YOOKASSA_KEY")
-ACCOUNT_ID = os.environ.get("YOOKASSA_ID")
+YOOKASSA_ID = os.environ.get("YOOKASSA_ID")
 
 # Application definition
 
