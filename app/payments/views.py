@@ -27,12 +27,26 @@ def payment_create_view(request):
             data = json.loads(request.body)
 
             description = f"{data.get('email', '')} {data.get('programm_info', '')} {data.get('data_smeni', '')}"
+            receipt = {
+                "customer": {"email": data.get("email", "")},
+                "items": [
+                    {
+                        "description": f"{data.get('programm_info', '')} {data.get('data_smeni', '')}",
+                        "quantity": 1.000,
+                        "amount": {"value": data.get("price", 0), "currency": "RUB"},
+                        "vat_code": 1,
+                        "payment_mode": "full_prepayment",
+                        "payment_subject": "commodity",
+                    }
+                ],
+            }
             payment_data = {
                 "amount": {"value": data.get("price", 0), "currency": "RUB"},
                 "confirmation": {"type": "embedded"},
                 "metadata": data,
                 "capture": "true",
                 "description": description,
+                "receipt": receipt,
             }
 
             credentials = f"{settings.YOOKASSA_ID}:{settings.YOOKASSA_KEY}"
