@@ -11,7 +11,7 @@ Create virtual env:
 python -m venv app/.venv
 
 # windows
-./app/.venv/Scripts/activate.bat
+./app/.venv/Scripts/Activate.ps1
 
 # unix
 source ./app/.venv/bin/activate
