@@ -49,9 +49,9 @@ RUN mkdir $APP_HOME
 RUN mkdir $APP_HOME/static
 RUN mkdir $APP_HOME/media
 
-COPY ./app/image $APP_HOME/media/image
-COPY ./app/programms $APP_HOME/media/programms
-COPY ./app/team $APP_HOME/media/team
+COPY ./image $APP_HOME/media/image
+COPY ./programms $APP_HOME/media/programms
+COPY ./team $APP_HOME/media/team
 
 WORKDIR $APP_HOME
 
